@@ -2,12 +2,12 @@ package www.Raven;
 
 public class Starter {
 	public static void main(String[] args) {
-        if (args.length < 2) {
-            Utils.printHelp();
-            return;
-        }
+//        if (args.length < 2) {
+//            Utils.printHelp();
+//            return;
+//        }
 
-		int numberOfExercises = 10;
+		int numberOfExercises = 10000;
 		int range = 20;
 
 		for (int i = 0; i < args.length; i++) {

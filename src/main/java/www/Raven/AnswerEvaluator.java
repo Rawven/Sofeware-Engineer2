@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static www.Raven.ExerciseGenerator.evaluateExpression;
 import static www.Raven.Utils.parseValue;
 
 public class AnswerEvaluator {
@@ -43,39 +44,6 @@ public class AnswerEvaluator {
 			e.printStackTrace();
 		}
 	}
-
-	private double evaluateExpression(String expression) {
-		// Basic evaluation logic for the purpose of demonstration
-
-		String[] tokens = expression.trim().split(" ");
-		System.out.println("tokens: " + Arrays.toString(tokens));
-		double result = parseValue(tokens[0]);
-
-
-		for (int i = 1; i < tokens.length; i += 2) {
-			String operator = tokens[i];
-			System.out.println("operator: " + operator);
-			double nextValue = parseValue(tokens[i + 1]);
-			switch (operator) {
-				case "+":
-					result += nextValue;
-					break;
-				case "-":
-					result -= nextValue;
-					break;
-				case "*":
-					result *= nextValue;
-					break;
-				case "/":
-					if (nextValue != 0) {
-						result /= nextValue;
-					}
-					break;
-				default:
-			}
-		}
-
-		return result;
-	}
+ 
 
 }
